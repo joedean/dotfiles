@@ -1,0 +1,20 @@
+[user]
+  name = Joseph Dean
+  email = joe@on-site.com
+[color]
+  status = always
+  branch = always[committer]
+  diff = always
+  interactive = auto
+  repositoryformatversion = 0
+  filemode = true
+  bare = false
+  logallrefupdates = true
+[gc]
+  auto=1
+[push]
+  default = current
+[pull]
+  rebase = true
+[rerere]
+  enabled = 1

@@ -1,0 +1,101 @@
+# Git
+alias g="git status"
+alias ga="git add"
+alias gaa="git add --all"
+alias gap="git add -p"
+alias gc="git commit"
+alias gcv="git commit -v"
+alias gb="git branch"
+alias gba="git branch -a"
+alias gbd="git branch -d"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gcot="git checkout -t"
+alias gf="git fetch"
+alias gm="git merge"
+alias gmn="git merge --no-ff"
+alias gr="git rebase"
+alias gri="git rebase -i"
+alias griu="git rebase -i @{upstream}"
+alias gl="git log"
+alias gd="git diff"
+alias gs="git show"
+alias gbl="git blame"
+alias glr=" git --no-pager log --graph --abbrev-commit --date=relative -10 --all --pretty='tformat:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'"
+alias gps="git push"
+alias gpsd="git push --delete"
+alias gpso="git push -u origin"
+alias gpsod="git push --delete origin"
+alias gpl="git pull"
+
+# Ruby
+alias r="ruby"
+alias i="pry --simple-prompt"
+alias rk="rake"
+alias rkt="rake -T"
+alias b="bundle"
+alias be="bundle exec"
+alias bi="bundle install"
+alias bu="bundle update"
+
+# Rails
+# console
+alias rlc="pry --simple-prompt -r ./config/environment"
+# server
+function rls() {
+  if [ -x script/rails ]; then
+    script/rails server thin $@
+  else
+    script/server $@
+  fi
+}
+# generator
+function rlg() {
+  if [ -x script/rails ]; then
+    script/rails generate $@
+  else
+    script/generate $@
+  fi
+}
+# rake
+alias rkdm="rake db:migrate"
+alias rkdmr="rake db:migrate:redo"
+alias rkdr="rake db:rollback"
+alias rkdc="rake db:create"
+alias rklc="rake log:clear"
+alias rkr="rake routes"
+
+# Java
+alias debugon="export JAVA_OPTS='-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=23334 -Dcom.onsitemanager.test.dbType=rails'"
+alias debugoff="export JAVA_OPTS='-Dcom.onsitemanager.test.dbType=rails'"
+
+# Emacs
+alias e="emacs"
+alias enw="emacs -nw"
+# inside Emacs terminals
+if [ -n "$EMACS" ]; then
+  alias ri="PAGER='less -R' ri -f ansi"
+  alias ssh="TERM=xterm ssh"
+fi
+
+# linux aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+# on-site dev
+alias gw="ssh gateway"
+alias bld="unset CLASSPATH && osm ant clean && osm ant clean-work && osm ant && osm ant compile-tests"
+alias blddb="osm ant clean && osm ant clean-work && osm ant && osm ant compile-tests && osm ant reload-ddl"
+alias ost="osm start tomcat -v"

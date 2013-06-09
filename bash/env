@@ -1,0 +1,17 @@
+# Enviroment Variables
+export EDITOR="emacs"
+export SVN_EDITOR="emacs"
+export GIT_EDITOR="emacs"
+export LC_CTYPE=en_US.UTF-8
+export HISTSIZE=500
+export HISTFILESIZE=1500
+export HISTCONTROL=erasedups
+export PROMPT_COMMAND='history -a'  # write previous line as prompt is displayed
+export CLICOLOR=1
+
+# Path
+export PATH="/home/joe/bin:/usr/local/bin:/usr/local/sbin:/usr/local/pgsql/bin:/home/joe/ws/scripts/localdev/bin:/home/joe/ws/scripts/bin:$PATH"
+export LD_LIBRARY_PATH=/usr/local/lib:$JAVA_HOME/jre/lib/i386/native_threads:$JAVA_HOME/jre/lib/i386:$JAVA_HOME/jre/lib/amd64/native_threads:$JAVA_HOME/jre/lib/amd64:/usr/lib:/usr/lib/jni
+
+# Rails Environment
+export RAILS_ENV=development
