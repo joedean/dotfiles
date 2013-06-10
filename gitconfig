@@ -3,7 +3,7 @@
   email = joe@on-site.com
 [color]
   status = always
-  branch = always[committer]
+  branch = always
   diff = always
   interactive = auto
   repositoryformatversion = 0
