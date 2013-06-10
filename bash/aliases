@@ -27,6 +27,7 @@ alias gpsd="git push --delete"
 alias gpso="git push -u origin"
 alias gpsod="git push --delete origin"
 alias gpl="git pull"
+alias gcdf="git clean -df"
 
 # Ruby
 alias r="ruby"
