@@ -1,9 +1,9 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.  see
 # /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-. ~/dotfiles/bash/env
-. ~/dotfiles/bash/config
-. ~/dotfiles/bash/aliases
+. ~/.joedev/dotfiles/bash/env
+. ~/.joedev/dotfiles/bash/config
+. ~/.joedev/dotfiles/bash/aliases
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
