@@ -29,3 +29,8 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+echo "Updating submodules"
+git submodule init
+git submodule update --recursive
+echo "Submodules updated"
