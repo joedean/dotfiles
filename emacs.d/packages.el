@@ -1,4 +1,4 @@
-(load "~/ps/emacs-bash-completion/bash-completion.el")
+(load "~/.joedev/dotfiles/emacs.d/vendor/emacs-bash-completion/bash-completion.el")
 (load "~/ws/scripts/emacs-lisp/osm.el")
 
 (require 'package)

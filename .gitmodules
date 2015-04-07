@@ -1,3 +1,6 @@
 [submodule "emacs.d/vendor/expand-region"]
 	path = emacs.d/vendor/expand-region
 	url = https://github.com/magnars/expand-region.el.git
+[submodule "emacs.d/vendor/emacs-bash-completion"]
+	path = emacs.d/vendor/emacs-bash-completion
+	url = https://github.com/szermatt/emacs-bash-completion.git
